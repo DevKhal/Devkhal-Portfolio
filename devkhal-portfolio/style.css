@@ -1,0 +1,584 @@
+html, body {
+	font-family: 'Comfortaa', cursive;
+	font-size: 18px;
+	background:  #333;
+	overflow-x: hidden;
+	margin: 0;
+	color: #7ac942;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	cursor: url(../img/logo32.png), auto;
+
+	-webkit-animation: background 15s cubic-bezier(1,1,1,1) infinite;
+	animation: background 15s cubic-bezier(1,1,1,1) infinite;  
+}
+
+/* ============= header ============ */
+
+.foreground {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	line-height: 1.3em;
+	pointer-events: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block; /* so I can scale the links*/
+	transition: all .6s ease-in-out;
+}
+a:hover {
+	transform: scale(1.10);
+	color: #88d629;
+	text-shadow: 5px 5px 2px #222;
+}
+
+.foreground a {
+	pointer-events: auto;
+	margin: 0 2.5em;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+header {
+	margin: auto;
+	text-align: center;
+	pointer-events: auto;
+	
+	animation: 7s fade-in;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+
+}
+
+.img-container img {
+	width: 90px;
+	display: block;
+	margin: auto;
+	animation: drift 2.9s ease-out 1;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+	animation-fill-mode: forwards;
+	margin-top: -2.3em;
+}
+
+.img-container {
+	display: flex;
+}
+
+.me {
+	width: 170px;
+	border: 5px solid #7ac942;
+	border-radius: 50%;
+	
+	animation-name: bounce-7;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	transform-origin: bottom;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+	animation-delay: 1.5s;
+	margin-bottom: 3.5em;
+}
+
+h1 {
+	font-size: 1.3em;
+	margin-top: -0.8em;
+	line-height: 1em;
+	color: #cccccc;
+}
+
+h2 {
+	font-size: 1.3em;
+	margin-top: 1em;
+	margin-bottom: 0.3em;
+}
+
+article a,
+header a {
+	color:#cccccc;
+}
+
+#first-line {
+	font-size: 1.1em;
+}
+
+#second-line {
+	margin-bottom: 1.9em;
+	font-size: 1.36em;
+}
+
+#grad1,
+#grad2 {
+    background: red;
+    background: -webkit-linear-gradient(left, #7ac942, #8acc26, #79b321, #68991c, #456613, #344d0e);
+    background: -o-linear-gradient(right, #7ac942, #8acc26, #79b321, #68991c, #456613, #344d0e);
+    background: -moz-linear-gradient(right, #7ac942, #8acc26, #79b321, #68991c, #456613, #344d0e);
+    background: linear-gradient(to right, #88cf56, #7ac942, #8acc26, #79b321, #68991c, #68991c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#grad1,
+#effect {
+	perspective: 1000px; 
+	perspective-origin: 200px 40px;
+	display: inline;
+	font-size: 3em;
+}
+
+#grad2 {
+	opacity: 0.4;
+}
+
+#effect {
+	font-size: 2.32em;
+}
+
+/* =========== main ============= */
+
+main {
+	margin: 0 10%;
+	display: flex;
+	justify-content: center;
+	overflow-y: hidden;
+}
+
+.projects {
+	max-width: 1050px;
+	display: flex;
+	margin: 3em 0.3em;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	animation: 5s fade-in;
+    animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.project {
+	text-align: center;
+	margin-bottom: 2em;
+	width: calc(33% - 0.8em);
+	position: relative;
+	text-align: center;
+}
+
+.app {
+	margin-left: 25px;
+	}
+
+.portfolio {
+	margin-left: 25px;
+}
+
+.RPS {
+	margin-left: 25px;
+}
+
+.dating {
+	margin-left: 25px;
+}
+
+.project a {
+	font-size: 0.9em;
+}
+
+.project-img:hover {
+	transform: scale(1.05);
+	box-shadow: 2px 2px 4px #222;
+	opacity: 0.3;
+}
+
+.project-img {
+	max-width: 100%;
+	transition: all 1s; /*because I set it to all properties, I get transition both in and out*/
+	vertical-align: bottom; /*images are rendered inline by default so the 4px of space is under them*/
+}
+
+.app.come-in {
+	transform: translateY(150px);
+	animation: come-in 0.7s ease forwards;
+	visibility: visible;
+	animation-delay: 0.4s;
+}
+
+.portfolio.come-in {
+	transform: translateY(150px);
+	animation: come-in 0.7s ease forwards;
+	visibility: visible;
+	animation-delay: 0.2s;
+}
+
+.game.come-in {
+	transform: translateY(150px);
+	animation: come-in 0.7s ease forwards;
+	visibility: visible;
+}
+
+.mentorship.come-in {
+	transform: translateY(150px);
+	animation: come-in 0.7s ease forwards;
+	visibility: visible;
+	animation-delay: 0.2s;
+}
+
+.dating.come-in {
+	transform: translateY(150px);
+	animation: come-in 0.7s ease forwards;
+	visibility: visible;
+	animation-delay: 0.4s;
+}
+
+.RPS.come-in {
+	transform: translateY(150px);
+	animation: come-in 0.7s ease forwards;
+	visibility: visible;
+	animation-delay: 0.6s;
+
+}
+
+.projects {
+	animation: 8s fade-in;
+	animation-fill-mode: both;
+}
+
+.fadeInDown {
+	animation-name: fadeInDown;
+	animation: 2s fadeInDown;
+}
+
+p {
+	text-align: center;
+	font-size: 1.7em;
+	margin: 2.5em auto;
+}
+
+/*=========== overlay hover effect ==========*/
+
+
+
+.content:hover .content-overlay{
+    opacity: 1;
+}
+
+.content:hover {
+	border-radius: 1em;
+}
+
+.content-image{
+    width: 100%;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.6s ease-in-out 0s;
+}
+
+.fadeIn-bottom{
+    top: 80%;
+}
+
+
+/* ============= footer ==============*/
+
+footer a {
+	padding-left: 1.3em;
+	padding-top: 0;
+	color: #91d93a;
+	text-decoration: none;
+}
+
+footer a:first-child {
+	padding-left: 0;
+	color: #cccccc;
+}
+
+footer p {
+	margin: 0 0 1em 0;
+	color: #cccccc;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 1.4em;
+	border-top: 0.1em solid  #91d93a;
+	margin: 0 10%;
+}
+
+/* ================= animations ============== */
+
+@-webkit-keyframes background {
+    0% { background-color: #333; }
+    33% { background-color: #483D8B; }  
+    66% { background-color: #darkgreen; }
+    100% { background-color: #indigo; }
+}
+
+@keyframes background {
+    0% { background-color: #222; }
+    25% { background-color: #444; }
+    50% { background-color: #483D8B; }
+    75% { background-color: #333; }
+}
+
+@keyframes bounce-7 {
+	0%	 { transform: scale(1,1) translateY(0); }
+	10%	{ transform: scale(1.1,.9) translateY(0); }
+	30%	{ transform: scale(.9,1.1) translateY(-50px); }
+	50%	{ transform: scale(1.05,.95) translateY(0); }
+	57%	{ transform: scale(1,1)	translateY(-7px); }
+	64%	{ transform: scale(1,1)	translateY(0); }
+	100% { transform: scale(1,1) translateY(0); }
+	}
+
+@keyframes drift {
+	0%{transform: translateX(-2550px);}
+	40%{transform: scale(1.1, 0.9) translateX(30px);}
+	80%{transform:scale(.9,1.1) translateX(-10px);}
+	100%{transform: translateX(0);}
+} 
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes come-in {
+    to { transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+	    opacity: 1;
+	}
+}
+@keyframes bounceInDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* =============== adjusment for mobile devices ================== */
+
+@media screen and (max-width: 1100px) {
+
+	header {
+		padding: 0 1.5em;
+	}
+	
+	p {
+		margin-bottom:
+		width: 100%;
+		flex-direction: column;
+	}
+	
+	.content {
+		width: 71%;
+	}
+	
+	.project {
+		width: 100%;
+	}
+
+	.project a {
+		font-size: 1em;
+		display: inline-block;
+	}
+	
+	.project-img {
+		border-radius: 1em;
+		
+	}
+	
+	.game {
+		margin: 2em 0;
+	}
+	
+	.portfolio {
+		margin: 2em 0;
+	}
+	
+	.app {
+		margin: 2em 0;
+	}
+	
+	.mentorship {
+		margin: 2em 0;
+	}
+
+	.RPS {
+		margin: 2em 0;
+	}
+
+	.dating {
+		margin: 2em 0;
+	}
+
+	footer a {
+		padding-left: 0.6em;
+		padding-top: 0.3em;
+	}
+
+	address {
+		display: flex;
+		justify-content: center;
+	}
+	
+	footer p {
+		font-size: 0.8em;
+	}
+	
+	#contact {
+		margin-bottom: 0.5em;
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	
+	.content {
+		width: 100%;
+	}
+	
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+    	margin-top: 0.9em;
+	}
+	
+	#grad1 {
+		line-height: 0.55em;
+	}
+	
+	#grad1 {
+		font-size: 3.8em;
+	}
+	
+	#effect {
+		line-height: 0.35em;
+		font-size: 3.19em;
+	}
+	
+	#first-line {
+		font-size: 1em;
+	}
+	
+	#second-line {
+		font-size: 1em;
+		line-height: 1.5;
+		margin-bottom: 2.9em;
+	}
+	
+	.me {
+		margin: 2em 0;
+	}
+	
+	.img-container img {
+		margin-top: -2.2em;
+		width: 60px;
+	}
+	
+	.foreground a {
+    	margin: 0 1.8em;
+	}
+}
+
+@media screen and (max-width: 700px) and (orientation : landscape) {
+
+	header {
+   		font-size: 0.7em;
+	}
+	.me {
+    	width: 100px;
+	}
+}
+
+@media screen and (max-width: 700px) and (orientation : portrait) {
+	#grad2 {
+		opacity: 1;
+	}
+	#grad1 {
+		opacity: 0.6;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	
+	#grad2 {
+	font-size: 2.33em;
+	}
+}
